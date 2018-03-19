@@ -63,13 +63,13 @@ gitboo editor编辑本地书籍 --&gt; push更改至github repo --&gt; github利
 
 ![](/assets/Selection_033.png)进入任务的控制台可以查看构建的详细过程：
 
-![](/assets/Selection_035.png)然后就可以[在线](http://139.196.170.32/docs/autodoc/)查看文档了，也可以下载[PDF](http://139.196.170.32/docs/autodoc/pdf)版本。
+![](/assets/Selection_035.png)然后就可以[在线](http://139.196.170.32/docs/autodoc/)查看文档了，也可以下载[PDF](http://139.196.170.32/docs/autodoc/pdf)版本。以后在本地修改文档并push到github后，jenkins会自动更新在线和PDF文档。
 
 # _注意：_
 
 * _首次同步至github触发的构建操作很可能失败，此时可以点击倒数第二张图中的“立即构建”命令手动触发构建操作，也可以随时登入jenkins后台手动触发构建操作；_
 * _请尽量将本地的更改先多次Save到本地再向github push，以减少jenkens服务器的构建压力；_
-* 构建任务自动生成了pdf格式的文档，地址为 http://139.196.170.32/docs/{jenkins\_\_job\_\_name}/pdf，如本文档的pdf版本为http://139.196.170.32/docs/autodoc/pdf。
+* 构建任务自动生成了pdf格式的文档，地址为 [http://139.196.170.32/docs/{jenkins\_\_job\_\_name}/pdf，如本文档的pdf版本为http://139.196.170.32/docs/autodoc/pdf。](http://139.196.170.32/docs/{jenkins__job__name}/pdf，如本文档的pdf版本为http://139.196.170.32/docs/autodoc/pdf。)
 
 
 
