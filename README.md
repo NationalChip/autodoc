@@ -3,9 +3,11 @@
 # 准备
 
 * github账号：
+
   * 强烈建议通过凌总将自己的github账号与[公司Github](https://github.com/NationalChip)关联，并将仓库建立到公司目录下
 
 * gitbook editor编辑器：
+
   * 安装参考[官方向导](https://www.gitbook.com/editor)
 
 # 步骤
@@ -16,7 +18,7 @@
 
 仓库建立完成后，导航到仓库的Settings下的webhooks页面，点击“Add webhook"，webhook配置固定如下：
 
-* Payload url: http://139.196.170.32:8080/github-webhook/
+* Payload url: [http://139.196.170.32:8080/github-webhook/](http://139.196.170.32:8080/github-webhook/)
 * Content type:application/json
 
 最后点击Add webhook完成添加，如果成功会显示绿色的√。![](/assets/Selection_022.png)![](/assets/Selection_023.png)![](/assets/Selection_024.png)
@@ -40,6 +42,12 @@
 ![](/assets/Selection_019.png)
 
 进入书籍并编写内容，然后依次点击gitbook右上角的”Save"和“Publish"按钮![](/assets/Selection_030.png)第一次publish时会让你填写github仓库地址，请务必填写https协议的地址\(gitbook editor暂不支持git协议\)，首次publish会让你填写github的用户名和密码
+
+![](/assets/Selection_031.png)
+
+![](/assets/Selection_032.png)
+
+点击”Sync"，成功后便可以转到jenkins的任务后台会发现，自动触发了图书发布操作：
 
 
 
