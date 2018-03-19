@@ -1,5 +1,17 @@
 # 文档在线化向导
 
+# 前言
+
+本文档是一个利用gitbook editor+github+jenkins自动将本地MD文档生成在线的html和pdf文档的指引，请先理解以下概念：
+
+* 书籍，是gitbook中新建的一系列MD文档的有机组合，物理上一本书所有的MD文档都保存在一个顶级目录下；
+* 仓库，是github进行进行版本控制的一系列相关文本文件集合，如源代码文件，MD文件；
+* 任务，是jenkins进行构建操作的一个抽象模型，一个任务包含源代码的仓库地址\(SVN、GIT等\)、构建操作的触发条件（定时、事件、手动）、构建的操作（清理环境、编译源代码、发布至生产环境等，在本文档中，构建操作是调用gitbook build/gitbook pdf 命令编译MD文件为html和pdf文件，并将后者发布至nginx服务器）等属性。
+
+在本文档中，一个文档对应一个gitbook中的书籍，对应一个github中的仓库，对应一个jenkins构建任务，也就是说，要达到本地文档修改后自动同步更新至web服务器需要新建一个gitbook，一个github repo，一个jenkins job，请数据流程为:
+
+gitboo editor编辑本地书籍 --&gt; push更改至github repo --&gt; github利用webhook通知jenkins进行构建 --&gt; jenkins拉取最新的MD文件，编译成html和pdf --&gt; 发布最新的html和pdf至nginx服务器。
+
 # 准备
 
 * github账号：
@@ -49,5 +61,5 @@
 
 点击”Sync"，成功后便可以转到jenkins的任务后台会发现，自动触发了图书发布操作：
 
-
+![](/assets/Selection_033.png)
 
